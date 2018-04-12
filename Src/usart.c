@@ -54,7 +54,8 @@
 
 /* USER CODE BEGIN 0 */
 
-struct AMessage xMessage;
+struct AMessage xMessage[AMessageSize];
+unsigned int messageId = 0;
 
 //消息队列句柄
 QueueHandle_t xQueue;
@@ -230,14 +231,17 @@ void taskPrintf (char *fmt, ...)
 { 
 
 		struct AMessage *pxMessage;
-		char str_tmp[20];
+		char str_tmp[70];
 
 		va_list vArgList;                            //定义一个va_list型的变量,这个变量是指向参数的指针.
 		va_start (vArgList, fmt);                 	 //用va_start宏初始化变量,这个宏的第二个参数是第一个可变参数的前一个参数,是一个固定的参数
-		vsnprintf(str_tmp, 20, fmt, vArgList); 		   //注意,不要漏掉前面的_
+		vsnprintf(str_tmp, 70, fmt, vArgList); 		   //注意,不要漏掉前面的_
 		va_end(vArgList);                            //用va_end宏结束可变参数的获取
-		strcpy(xMessage.ucData,str_tmp); 
-		pxMessage = & xMessage;
+		strcpy(xMessage[messageId].ucData,str_tmp); 
+		pxMessage = & xMessage[messageId];
+		messageId++;
+		if(messageId == AMessageSize) messageId = 0;
+//		printf("pxMessageID:%d, pxMessage:0x%p\n",pxMessage->ucMessageID,pxMessage);
 		xQueueSend( xQueue, (void *)&pxMessage, ( TickType_t ) 0 );  		
 	
 } 

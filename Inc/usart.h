@@ -71,8 +71,9 @@ extern UART_HandleTypeDef huart2;
 struct AMessage
  {
      char ucMessageID;
-     char ucData[ 20 ];
+     char ucData[ 70 ];
  };
+ #define AMessageSize 10 
 
 /* USER CODE BEGIN Private defines */
 	 

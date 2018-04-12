@@ -88,9 +88,30 @@ void HMR_Action_Ctrl(void const *argument)
 		for(;;)
 		{
 
-
+			int a=65;
+			int *addr;
+			addr = &a;
 				// 发送消息 传递的消息内容指针的指针
-			taskPrintf("task message OK!");
+			
+			taskPrintf("a:0x%p, &a:0x%x, addr:0x%p, &addr:%x\n",a,&a,addr,addr);
+			
+			taskPrintf("addr:%x\n",(int*)addr);
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			while(1)
 			
 			osDelay(1);
 				
@@ -122,10 +143,13 @@ void HMR_Print(void const *argument)
 				{
 						if( xQueueReceive( xQueue, &( pxRxedMessage ), ( TickType_t ) 10 ) )
 								{
+									
 										// pcRxedMessage 指向 xMessage
-										printf("print Task:");
-										printf("%s\n",(*pxRxedMessage).ucData);
 										
+										printf("print Task->    ");
+//										printf("ID:%d, pxRxedMessage:0x%p, sizeof:%x\n",(*pxRxedMessage).ucMessageID,pxRxedMessage,sizeof(struct AMessage));
+										printf("%s\n",(*pxRxedMessage).ucData);
+										pxRxedMessage++;
 								}
 								
 				}				
