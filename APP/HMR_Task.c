@@ -85,17 +85,33 @@ void HMR_Protocol_Decode(void const *argument)
 void HMR_Action_Ctrl(void const *argument)
 {
 		xQueue = xQueueCreate( 10, sizeof( struct AMessage * ) );
+	
+		struct pencil
+		{
+			int hardness;
+			char marker;
+			int number;
+			
+		};
+		int a = 5;
+		int *p;
+		p = &a;
 		for(;;)
 		{
+			struct pencil pen[3]= 
+			{
+				{1,'1',444},      \
+				{2,'a',555},			\
+				{3,'b',666},			\
+				
+			};
+			
+			
 
-			int a=65;
-			int *addr;
-			addr = &a;
-				// 发送消息 传递的消息内容指针的指针
+//		*p=888;
 			
-			taskPrintf("a:0x%p, &a:0x%x, addr:0x%p, &addr:%x\n",a,&a,addr,addr);
-			
-			taskPrintf("addr:%x\n",(int*)addr);
+			taskPrintf("*p:%d, *p = 777 : %d ,a:%d\n",*p,a,a);
+
 			
 			
 			
@@ -111,7 +127,7 @@ void HMR_Action_Ctrl(void const *argument)
 			
 			
 			
-			while(1)
+
 			
 			osDelay(1);
 				
