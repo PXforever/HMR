@@ -84,49 +84,16 @@ void HMR_Protocol_Decode(void const *argument)
 ***********************************************************************/
 void HMR_Action_Ctrl(void const *argument)
 {
-		xQueue = xQueueCreate( 10, sizeof( struct AMessage * ) );
-	
-		struct pencil
-		{
-			int hardness;
-			char marker;
-			int number;
-			
-		};
-		int a = 5;
-		int *p;
-		p = &a;
+		xQueue = xQueueCreate( 10, sizeof( struct AMessage * ) );//消息队列，不可删除
+	 
+		HAL_StatusTypeDef state;
 		for(;;)
 		{
-			struct pencil pen[3]= 
-			{
-				{1,'1',444},      \
-				{2,'a',555},			\
-				{3,'b',666},			\
 				
-			};
-			
+
+			SetPWM(0,0,2020);
 			
 
-//		*p=888;
-			
-			taskPrintf("*p:%d, *p = 777 : %d ,a:%d\n",*p,a,a);
-
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 
 			
 			osDelay(1);

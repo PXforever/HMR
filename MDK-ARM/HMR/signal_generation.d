@@ -1,5 +1,9 @@
 hmr\signal_generation.o: ..\BSP\Signal_Generation.c
 hmr\signal_generation.o: ..\BSP\Signal_Generation.h
+hmr\signal_generation.o: ..\Middlewares\Device.h
+hmr\signal_generation.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+hmr\signal_generation.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+hmr\signal_generation.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 hmr\signal_generation.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 hmr\signal_generation.o: ../Inc/stm32f1xx_hal_conf.h
 hmr\signal_generation.o: ../Inc/main.h
@@ -8,7 +12,6 @@ hmr\signal_generation.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 hmr\signal_generation.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 hmr\signal_generation.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
 hmr\signal_generation.o: ../Drivers/CMSIS/Include/core_cm3.h
-hmr\signal_generation.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 hmr\signal_generation.o: ../Drivers/CMSIS/Include/core_cmInstr.h
 hmr\signal_generation.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 hmr\signal_generation.o: ../Drivers/CMSIS/Include/core_cmFunc.h
@@ -31,6 +34,5 @@ hmr\signal_generation.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 hmr\signal_generation.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 hmr\signal_generation.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 hmr\signal_generation.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_wwdg.h
-hmr\signal_generation.o: ..\Middlewares\Device.h
-hmr\signal_generation.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-hmr\signal_generation.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+hmr\signal_generation.o: ../Inc/i2c.h
+hmr\signal_generation.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

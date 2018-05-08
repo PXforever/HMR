@@ -1,0 +1,10 @@
+hmr\sys.o: ..\ExtendHardWave\sys\sys.c
+hmr\sys.o: ..\ExtendHardWave\sys\sys.h
+hmr\sys.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\stm32f10x.h
+hmr\sys.o: C:\Users\PX\Desktop\2018\Humanoid\CODE\HMR\MDK-ARM\RTE\RTE_Components.h
+hmr\sys.o: ../Drivers/CMSIS/Include/core_cm3.h
+hmr\sys.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+hmr\sys.o: ../Drivers/CMSIS/Include/core_cmInstr.h
+hmr\sys.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
+hmr\sys.o: ../Drivers/CMSIS/Include/core_cmFunc.h
+hmr\sys.o: C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0\Device\Include\system_stm32f10x.h

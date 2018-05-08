@@ -1,4 +1,4 @@
-hmr\i2c.o: ../Src/i2c.c
+hmr\i2c.o: ..\Src\i2c.c
 hmr\i2c.o: ../Inc/i2c.h
 hmr\i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 hmr\i2c.o: ../Inc/stm32f1xx_hal_conf.h

@@ -44,13 +44,13 @@
 "hmr\wwdg.o"
 "hmr\gpio.o"
 "hmr\stm32f1xx_hal_timebase_tim.o"
-"hmr\i2c.o"
 "hmr\stm32f1xx_it.o"
 "hmr\main.o"
 "hmr\freertos.o"
 "hmr\stm32f1xx_hal_msp.o"
 "hmr\iwdg.o"
 "hmr\usart.o"
+"hmr\i2c.o"
 --library_type=microlib --strict --scatter "HMR\HMR.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

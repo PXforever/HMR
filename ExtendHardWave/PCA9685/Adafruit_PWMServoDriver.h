@@ -14,17 +14,20 @@
   Written by Limor Fried/Ladyada for Adafruit Industries.  
   BSD license, all text above must be included in any redistribution
  ****************************************************/
-#ifndef __SIGNAL_GENERATION_H
-#define __SIGNAL_GENERATION_H
 
-//1、头文件
-/********************************************************************************************************************************************************************/
-#include "Device.h"
-#include "stm32f1xx_hal.h"
-#include "i2c.h"
+#ifndef _ADAFRUIT_PWMServoDriver_H
+#define _ADAFRUIT_PWMServoDriver_H
 
-//2、宏定义
-/********************************************************************************************************************************************************************/
+//#if ARDUINO >= 100
+// #include "Arduino.h"
+//#else
+// #include "WProgram.h"
+//#endif
+
+#include "IIC.h"
+#include "usart.h"
+
+
 #define PCA9685_SUBADR1 0x2
 #define PCA9685_SUBADR2 0x3
 #define PCA9685_SUBADR3 0x4
@@ -46,38 +49,20 @@
 #define SERVO_MAX 556                 //最大的旋转度
 #define SERVO_MIN 100                 //最小的旋转度
 
-//3、类型定义
-/********************************************************************************************************************************************************************/
 
 
 
-
-//4、变量声明
-/********************************************************************************************************************************************************************/
-
-
-//5、函数声明
-/********************************************************************************************************************************************************************/
-uint8_t read8(uint8_t addr);
-void write8(uint8_t addr, uint8_t d);
+u8 read8(u8 addr);
+void write8(u8 addr, u8 d);
 
 
 void begin(void);
 void reset(void);
 void SetPWMFreq(float freq);
-void SetPWM(uint8_t num, uint16_t on, uint16_t off);
-void SetPin(uint8_t num, uint16_t val, uint8_t invert);
+void SetPWM(u8 num, u16 on, u16 off);
+void SetPin(u8 num, u16 val, u8 invert);
 //void Adafruit_PWMServoDriver(u8 addr);
 
 
+
 #endif
-
-
-
-
-
-
-
-
-
-

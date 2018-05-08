@@ -56,6 +56,8 @@
 #include "usart.h"
 #include "wwdg.h"
 #include "gpio.h"
+#include "Signal_Generation.h"
+
 //#include "stdint.h""
 
 /* USER CODE BEGIN Includes */
@@ -121,7 +123,10 @@ int main(void)
 #endif
   
 	 MX_GPIO_Init();
-   DEV_Open(DEVICE_FOUR);
+   DEV_Open(DEVICE_FOUR);		//开启串口设备
+	 DEV_Open(DEVICE_TWO);		//开启PWM产生设备
+	 SetPWMFreq(58);					//设置PWM频率
+	
   // MX_USART1_UART_Init();
 	// MX_USART2_UART_Init();
 

@@ -54,4 +54,5 @@ hmr\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 hmr\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 hmr\main.o: ../Inc/wwdg.h
 hmr\main.o: ../Inc/gpio.h
+hmr\main.o: ..\BSP\Signal_Generation.h
 hmr\main.o: ..\Middlewares\Device.h

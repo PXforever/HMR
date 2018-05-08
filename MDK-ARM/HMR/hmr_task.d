@@ -50,3 +50,6 @@ hmr\hmr_task.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_wwdg.h
 hmr\hmr_task.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 hmr\hmr_task.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
 hmr\hmr_task.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+hmr\hmr_task.o: ..\BSP\Signal_Generation.h
+hmr\hmr_task.o: ..\Middlewares\Device.h
+hmr\hmr_task.o: ../Inc/i2c.h
