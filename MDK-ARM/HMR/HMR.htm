@@ -3,7 +3,7 @@
 <title>Static Call Graph - [HMR\HMR.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image HMR\HMR.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Tue May 08 19:04:15 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed May 09 10:28:00 2018
 <BR><P>
 <H3>Maximum Stack Usage =        240 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -961,7 +961,6 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HMR_Print
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetPWMFreq
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SIGNAL_GENERATION_open
 </UL>
 
 <P><STRONG><a name="[f5]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
@@ -1418,12 +1417,11 @@ Local Symbols
 <P><STRONG><a name="[4d]"></a>SIGNAL_GENERATION_lseek</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, signal_generation.o(i.SIGNAL_GENERATION_lseek))
 <BR>[Address Reference Count : 1]<UL><LI> signal_generation.o(.ARM.__AT_0x08005038)
 </UL>
-<P><STRONG><a name="[49]"></a>SIGNAL_GENERATION_open</STRONG> (Thumb, 40 bytes, Stack size 88 bytes, signal_generation.o(i.SIGNAL_GENERATION_open))
+<P><STRONG><a name="[49]"></a>SIGNAL_GENERATION_open</STRONG> (Thumb, 28 bytes, Stack size 88 bytes, signal_generation.o(i.SIGNAL_GENERATION_open))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = SIGNAL_GENERATION_open &rArr; write8 &rArr; HAL_I2C_Mem_Write &rArr; I2C_RequestMemoryWrite &rArr; I2C_WaitOnMasterAddressFlagUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_I2C1_Init
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;write8
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_I2C_MspInit
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> signal_generation.o(.ARM.__AT_0x08005038)

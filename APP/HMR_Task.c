@@ -86,12 +86,11 @@ void HMR_Action_Ctrl(void const *argument)
 {
 		xQueue = xQueueCreate( 10, sizeof( struct AMessage * ) );//消息队列，不可删除
 	 
-		HAL_StatusTypeDef state;
 		for(;;)
 		{
 				
 
-			SetPWM(0,0,2020);
+			SetPWM(0,0,1200);//该设置（舵机号，起始频率，末尾频率）占空比取值为500~2500
 			
 
 

@@ -125,7 +125,7 @@ int main(void)
 	 MX_GPIO_Init();
    DEV_Open(DEVICE_FOUR);		//开启串口设备
 	 DEV_Open(DEVICE_TWO);		//开启PWM产生设备
-	 SetPWMFreq(58);					//设置PWM频率
+	 SetPWMFreq(250);					//设置PWM频率    舵机区间500us~2500us   具体设置参考该舵机属性
 	
   // MX_USART1_UART_Init();
 	// MX_USART2_UART_Init();
